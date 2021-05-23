@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Choice Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <!--    Start Section     -->
+      <div id="start">Start Quiz</div>
+
+      <!--    Guide Section    -->
+      <div id="guide">
+        <h2>Quiz Guide</h2>
+        <h4>1. You have 20 seconds per question.</h4>
+        <h4>2. Choose wisely, an answer cannot be undone.</h4>
+        <h4>3. Answer before the time runs out to get points.</h4>
+        <h4>4. You must answer all questions to Exit.</h4>
+        <div id="button">
+          <button id="exit" onClick="window.location.href=window.location.href">
+            Exit
+          </button>
+          <button id="continue">Start</button>
+        </div>
+      </div>
+
+      <!--    Quiz Section    -->
+      <div id="quiz">
+        <div id="quiz_header">
+          <h5>Coding Quiz App</h5>
+          <div id="timer">
+            <h6>Time Left</h6>
+            <h6 id="time">00</h6>
+          </div>
+        </div>
+
+        <!--     Quiz Questions  -->
+
+        <div id="question">
+          <h2 id="questionNo"></h2>
+          <h2 id="questionText"></h2>
+        </div>
+
+        <!--       Quiz Choices   -->
+
+        <div id="optionList">
+          <h4 class="choice_question" id="option1"></h4>
+          <h4 class="choice_question" id="option2"></h4>
+          <h4 class="choice_question" id="option3"></h4>
+          <h4 class="choice_question" id="option4"></h4>
+        </div>
+
+        <!--  Answers Section-->
+
+        <div id="answersSection">
+          <h3 id="total_correct">3 Of 10 Questions</h3>
+          <h3 id="next_question">Next</h3>
+        </div>
+      </div>
+      <!--   Result Section  -->
+      <div id="result">
+        <i class="trophy"></i>
+        <h6>Thank you for taking my Quiz</h6>
+        <h6 id="points">You got 0 out of 10</h6>
+        <button id="saveScore">Save Score</button>
+        <button
+          id="startAgain"
+          onClick="window.location.href=window.location.href"
+        >
+          Restart
+        </button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
