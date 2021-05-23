@@ -1,4 +1,11 @@
-var highScores = []
+var highScores;
+if(JSON.parse(localStorage.getItem("highScores"))){
+    highScores = JSON.parse(localStorage.getItem("highScores"))
+    console.log(highScores)
+}
+else{
+    highScores = []
+}
 let multipleChoiceQuestion = [{
     question: "What does HTML stand for?",
     choice1: "Hyperlinks and Text Markup Language",
@@ -204,7 +211,7 @@ choice_question.forEach((choices, choiceNo) => {
     })
 });
 
-////what happen when 'Next' Button Will Click
+////next click
 next_question.addEventListener("click", () => {
     //    if index is less then multipleChoiceQuestion.length
     if (index !== multipleChoiceQuestion.length - 1) {
@@ -250,6 +257,7 @@ saveScore.addEventListener("click", function (event){
         }
         highScores.push(userObj)
 localStorage.setItem("highScores", JSON.stringify(highScores));
+display.out.println(highScores(0));
     start.style.display = "block";
     result.style.display = "none";
 });
